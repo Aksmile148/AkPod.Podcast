@@ -4,7 +4,7 @@ using System.Text;
 using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
 
-namespace AkPod.Podcast.Data
+namespace AkPod.Podcast.DataAccess.Data
 {
     public class ApplicationDbContext : IdentityDbContext
     {

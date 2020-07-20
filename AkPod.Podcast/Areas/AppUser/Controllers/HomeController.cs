@@ -18,11 +18,13 @@ namespace AkPod.Podcast.Controllers
             _logger = logger;
         }
 
+        [Area("AppUser")]
         public IActionResult Index()
         {
             return View();
         }
 
+        [Area("AppUser")]
         public IActionResult Privacy()
         {
             return View();
