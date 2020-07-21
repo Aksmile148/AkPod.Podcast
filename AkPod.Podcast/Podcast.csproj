@@ -24,7 +24,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\AkPod.Podcast.DataAccess\AkPod.Podcast.DataAccess.csproj" />
+    <ProjectReference Include="..\AkPod.Podcast.DataAccess\Podcast.DataAccess.csproj" />
   </ItemGroup>
 
 </Project>

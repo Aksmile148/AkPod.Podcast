@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.Text;
 
-namespace AkPod.Podcast.Models
+namespace Podcast.Models
 {
     public class Pod
     {

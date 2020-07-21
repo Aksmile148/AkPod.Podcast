@@ -3,13 +3,13 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.30114.105
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AkPod.Podcast", "AkPod.Podcast\AkPod.Podcast.csproj", "{28748CF2-052B-49BF-BDBF-8999EA9C8C29}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Podcast", "AkPod.Podcast\Podcast.csproj", "{28748CF2-052B-49BF-BDBF-8999EA9C8C29}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AkPod.Podcast.DataAccess", "AkPod.Podcast.DataAccess\AkPod.Podcast.DataAccess.csproj", "{75B987E9-985E-488B-A4CE-F5D2B6BD1B23}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Podcast.DataAccess", "AkPod.Podcast.DataAccess\Podcast.DataAccess.csproj", "{75B987E9-985E-488B-A4CE-F5D2B6BD1B23}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AkPod.Podcast.Models", "AkPod.Podcast.Models\AkPod.Podcast.Models.csproj", "{B6A4F9D0-9DE4-4EA8-BD58-7D0F8C7C3BC6}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Podcast.Models", "AkPod.Podcast.Models\Podcast.Models.csproj", "{B6A4F9D0-9DE4-4EA8-BD58-7D0F8C7C3BC6}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AkPod.Podcast.Utilities", "AkPod.Podcast.Utilities\AkPod.Podcast.Utilities.csproj", "{20526D98-CAFA-4B3A-935B-5A897C4DB7A6}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Podcast.Utilities", "AkPod.Podcast.Utilities\Podcast.Utilities.csproj", "{20526D98-CAFA-4B3A-935B-5A897C4DB7A6}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

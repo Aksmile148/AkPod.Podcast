@@ -7,7 +7,7 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 using AkPod.Podcast.Models;
 
-namespace AkPod.Podcast.Controllers
+namespace Podcast.Controllers
 {
     public class HomeController : Controller
     {

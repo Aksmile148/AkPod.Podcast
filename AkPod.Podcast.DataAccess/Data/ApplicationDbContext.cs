@@ -3,9 +3,9 @@ using System.Collections.Generic;
 using System.Text;
 using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
-using AkPod.Podcast.Models;
+using Podcast.Models;
 
-namespace AkPod.Podcast.DataAccess.Data
+namespace Podcast.DataAccess.Data
 {
     public class ApplicationDbContext : IdentityDbContext
     {
@@ -14,6 +14,6 @@ namespace AkPod.Podcast.DataAccess.Data
         {
         }
 
-        public DbSet<Pod> Podcasts { get; set; }
+        public DbSet<Pod> Pods { get; set; }
     }
 }

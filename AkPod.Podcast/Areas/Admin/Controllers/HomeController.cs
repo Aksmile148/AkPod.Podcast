@@ -6,10 +6,10 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 using AkPod.Podcast.Models;
-using AkPod.Podcast.DataAccess.Data;
+using Podcast.DataAccess.Data;
 using Microsoft.AspNetCore.Hosting;
 
-namespace AkPod.Podcast.Controllers
+namespace Podcast.Controllers
 {
     public class DashBoardController : Controller
     {
