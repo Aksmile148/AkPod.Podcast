@@ -23,8 +23,8 @@ namespace AkPod.Podcast.Models
 
         public DateTime dateUploaded { get; set; } = DateTime.Now;
 
-        [Required(ErrorMessage = "Please choose profile image")]
-        [Display(Name = "Profile Picture")]
-        public IFormFile ProfileImage { get; set; }
+        [Required(ErrorMessage = "Please choose audio file")]
+        [Display(Name = "Audio File")]
+        public IFormFile AudioFile { get; set; }
     }
 }
