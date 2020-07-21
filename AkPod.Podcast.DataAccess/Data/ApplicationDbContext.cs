@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Text;
 using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
+using AkPod.Podcast.Models;
 
 namespace AkPod.Podcast.DataAccess.Data
 {
@@ -12,5 +13,7 @@ namespace AkPod.Podcast.DataAccess.Data
             : base(options)
         {
         }
+
+        public DbSet<Pod> Podcasts { get; set; }
     }
 }
