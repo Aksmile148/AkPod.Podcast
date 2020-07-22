@@ -85,6 +85,25 @@ namespace Podcast.Controllers
             return uniqueFileName;
         }
 
+        [Area("Admin")]
+        public async Task<IActionResult> Delete(int id)
+        {
+            var objFromDb = _context.Pods.Where(p => p.Id == id).FirstOrDefaultAsync();
+
+            if (id != objFromDb.Id)
+            {
+                ViewBag.pod = "Podcast not found!";
+                return View();
+            }
+            else
+            {
+                _context.Remove(objFromDb);
+                await _context.SaveChangesAsync();
+                return RedirectToAction(nameof(Index));
+            }
+                
+        }
+
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
         public IActionResult Error()
         {

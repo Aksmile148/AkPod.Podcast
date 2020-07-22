@@ -28,6 +28,9 @@
                 <td>@pod.Description</td>
                 <td>@pod.dateUploaded</td>
                 <td>@pod.Tag</td>
+                <td>
+                    <a asp-controller="DashBoard" asp-action="Update" asp-all-route-id="@pod.Id"><i class=""></i></a>
+                </td>
             </tr>
 
         }
