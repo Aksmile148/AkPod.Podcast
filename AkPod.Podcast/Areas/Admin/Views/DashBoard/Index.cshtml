@@ -1,0 +1,35 @@
+﻿@model IEnumerable<Podcast.Models.Pod>
+
+@{
+    ViewData["Title"] = "Home Page";
+}
+
+<h4 class="text-center text-uppercase">List of Podcasts</h4>
+
+<p>
+    <a asp-action="New" class="btn btn-sm btn-primary rounded-0 text-uppercase"><i class="fas fa-plus-circle"></i> Add New</a>
+</p>
+<table class="table table-bordered">
+    <thead>
+        <tr>
+            <th>@Html.DisplayNameFor(model => model.Title)</th>
+            <th>@Html.DisplayNameFor(model => model.Description)</th>
+            <th>@Html.DisplayNameFor(model => model.dateUploaded)</th>
+            <th>@Html.DisplayNameFor(model => model.Tag)</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var pod in Model)
+        {
+            <tr>
+                <td>
+                    @pod.Title
+                </td>
+                <td>@pod.Description</td>
+                <td>@pod.dateUploaded</td>
+                <td>@pod.Tag</td>
+            </tr>
+
+        }
+    </tbody>
+</table>   

@@ -5,7 +5,7 @@ using System.Text;
 
 namespace Podcast.DataAccess.Data.Repository.IRepository
 {
-    public interface IPodRepository
+    public interface IPodRepository : IRepository<Pod>
     {
         void Update(Pod pod);
     }

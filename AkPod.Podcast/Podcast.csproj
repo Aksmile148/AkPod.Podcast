@@ -27,4 +27,8 @@
     <ProjectReference Include="..\AkPod.Podcast.DataAccess\Podcast.DataAccess.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="wwwroot\audios\" />
+  </ItemGroup>
+
 </Project>

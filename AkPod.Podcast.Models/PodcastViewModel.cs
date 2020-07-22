@@ -25,6 +25,6 @@ namespace Podcast.Models
 
         [Required(ErrorMessage = "Please choose audio file")]
         [Display(Name = "Audio File")]
-        public IFormFile AudioFile { get; set; }
+        public IFormFile Audio { get; set; }
     }
 }

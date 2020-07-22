@@ -5,7 +5,7 @@ using System.Text;
 
 namespace Podcast.DataAccess.Data.Repository
 {
-    public class UnitOfWork : IUnitOfWork
+    public class UnitOfWork : IUnitOfWork 
     {
         private readonly ApplicationDbContext _context;
         public UnitOfWork(ApplicationDbContext context)
