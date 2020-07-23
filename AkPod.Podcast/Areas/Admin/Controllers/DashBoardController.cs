@@ -85,6 +85,55 @@ namespace Podcast.Controllers
             return uniqueFileName;
         }
 
+
+        [Area("Admin")]
+        public async Task<IActionResult> Update(int id)
+        {
+            PodcastViewModel viewModel = new PodcastViewModel();
+
+            var pod = await _context.Pods.Where(p => p.Id == id).FirstOrDefaultAsync();
+
+            if (id != pod.Id)
+                // ViewBag.pod = "Podcast not found!";
+                return RedirectToAction(nameof(Index));
+
+            _context.Remove(pod);
+            await _context.SaveChangesAsync();
+
+
+
+            //viewModel.Id = pod.Id;
+            //viewModel.Title = pod.Title;
+            //viewModel.Author = pod.Author;
+            //viewModel.Description = pod.Description;
+            //viewModel.Tag = pod.Tag;
+
+            return View(viewModel);
+        }
+
+        [Area("Admin")]
+        [HttpPost]
+        public async Task<IActionResult> Update(PodcastViewModel model)
+        {
+            if (ModelState.IsValid)
+            {
+                string uniqueFileName = UploadedFile(model);
+
+                Pod pod = new Pod
+                {
+                    Title = model.Title,
+                    AudioFile = uniqueFileName,
+                    dateUploaded = model.dateUploaded,
+                    Description = model.Description,
+                    Tag = model.Tag
+                };
+                _context.Add(pod);
+                await _context.SaveChangesAsync();
+                return RedirectToAction(nameof(Index));
+            }
+            return View();
+        }
+
         [Area("Admin")]
         public async Task<IActionResult> Delete(int id)
         {
