@@ -14,6 +14,8 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Podcast.DataAccess.Data.Repository.IRepository;
 using Podcast.DataAccess.Data.Repository;
+using Microsoft.AspNetCore.Identity.UI.Services;
+using Podcast.Utilities;
 
 namespace Podcast
 {
@@ -39,6 +41,8 @@ namespace Podcast
             services.AddRazorPages();
 
             services.AddScoped<IUnitOfWork, UnitOfWork>();
+
+            services.AddSingleton<IEmailSender, EmailSender>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

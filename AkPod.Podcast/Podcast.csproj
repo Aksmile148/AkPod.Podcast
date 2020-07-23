@@ -25,6 +25,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\AkPod.Podcast.DataAccess\Podcast.DataAccess.csproj" />
+    <ProjectReference Include="..\AkPod.Podcast.Utilities\Podcast.Utilities.csproj" />
   </ItemGroup>
 
   <ItemGroup>
