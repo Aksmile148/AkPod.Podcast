@@ -13,9 +13,11 @@ using Podcast.DataAccess.Data.Repository.IRepository;
 using Podcast.Models;
 using Microsoft.EntityFrameworkCore;
 using System.IO;
+using Microsoft.AspNetCore.Authorization;
 
 namespace Podcast.Controllers
 {
+    [Authorize(Roles ="Admin")]
     public class DashBoardController : Controller
     {
         public readonly ApplicationDbContext _context;
