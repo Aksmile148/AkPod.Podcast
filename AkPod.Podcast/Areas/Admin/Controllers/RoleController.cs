@@ -15,17 +15,20 @@ namespace Podcast.Areas.Admin.Controllers
             _roleManager = roleManager;
         }
 
+        [Area("Admin")]
         public  IActionResult Index()
         {
             var roles = _roleManager.Roles.ToList();
-            return View();
+            return View(roles);
         }
 
+        [Area("Admin")]
         public IActionResult Create()
         {
             return View(new IdentityRole());
         }
 
+        [Area("Admin")]
         [HttpPost]
         public async Task<IActionResult> Create(IdentityRole role)
         {
