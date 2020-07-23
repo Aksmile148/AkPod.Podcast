@@ -88,12 +88,12 @@ namespace Podcast.Controllers
         [Area("Admin")]
         public async Task<IActionResult> Delete(int id)
         {
-            var objFromDb = _context.Pods.Where(p => p.Id == id).FirstOrDefaultAsync();
+            var objFromDb = await _context.Pods.Where(p => p.Id == id).FirstOrDefaultAsync();
 
             if (id != objFromDb.Id)
             {
                 ViewBag.pod = "Podcast not found!";
-                return View();
+                return RedirectToAction(nameof(Index));
             }
             else
             {

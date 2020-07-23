@@ -16,6 +16,7 @@
             <th>@Html.DisplayNameFor(model => model.Description)</th>
             <th>@Html.DisplayNameFor(model => model.dateUploaded)</th>
             <th>@Html.DisplayNameFor(model => model.Tag)</th>
+            <th>Action</th>
         </tr>
     </thead>
     <tbody>
@@ -29,7 +30,8 @@
                 <td>@pod.dateUploaded</td>
                 <td>@pod.Tag</td>
                 <td>
-                    <a asp-controller="DashBoard" asp-action="Update" asp-all-route-id="@pod.Id"><i class=""></i></a>
+                    <a asp-controller="DashBoard" asp-action="Update" asp-route-id="@pod.Id" class="btn btn-warning btn-sm">Update</a>
+                    <a asp-controller="DashBoard" asp-action="Delete" asp-route-id="@pod.Id" class="btn btn-danger btn-sm">Delete</a>
                 </td>
             </tr>
 
